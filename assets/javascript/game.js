@@ -30,3 +30,14 @@ $('#button3').attr('value', buttonValues[2]);
 $('#button4').attr('value', buttonValues[3]); 
 }
 startGame();
+
+//Play game conditions.
+var playGame = function(){
+currentScore = currentScore + (Number($(this).attr('value')));
+$('#scoreBox').text(currentScore);
+    
+//if current core = target score
+if  (currentScore === targetScore){
+$('#scoreBox').text(currentScore)
+winCounter++;
+$('#wins').text(winCounter);
