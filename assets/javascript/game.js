@@ -41,3 +41,25 @@ if  (currentScore === targetScore){
 $('#scoreBox').text(currentScore)
 winCounter++;
 $('#wins').text(winCounter);
+
+//"you win"
+$('.modal').removeClass('modal');
+('#winloss').text('You Win!'); 
+}
+else if (currentScore > targetScore){
+$('#scoreBox').text(currentScore);
+lossCounter++;
+$('#losses').text(lossCounter);
+
+//"you lose".
+$('.modal').removeClass('modal');
+$('#winloss').text('Oh No! Your Score Exceeded the Target Score.');
+}
+else {
+    //repeat and play 
+}
+}
+//on-click for crystal buttons.
+$('.crystalButton').on('click', playGame);
+//on-click restarts game.
+$('.btn-success').on('click', startGame);
