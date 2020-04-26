@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Crystal Collector</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+</head>
+<body>
+    <div class="container">
+        <!--First Row-->
+        <div class="row">
+            <div class="col-lg-4 col-md-4 instructions box text-center">
+                <h1>Crystals Collector!</h1>
+        </div>
+        <br>
+             
+        <!--Second Row-->
+        <div class="row">
+            <div class="col-lg-4 col-md-4 instructions box text-center">
+            <h2>Instructions</h2>
+            <p>You will be given a random number at the start of the game.</p>
+            <p>There are four crystals below, each crystal's value is hidden from you until you click on it.</p>
+            <p>By clicking on the crystal you will add a specific amount of the points to your total score.</p>
+            <p>You win the game by matching you total score to random number</p>
+            <p>You lose the game if your total score goes above the random number.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 col-sm-3 crystal">
+            <button class='crystalButton' id='button1'>
+                <img src="assets/images/Ruby.jpg" alt="Ruby">
+            </button>
+        </div>
+        <div class="col-md-3 col-sm-3 crystal">
+            <button class='crystalButton' id='button2'>
+                <img src="assets/images/Patina.jpg" alt="Patina">
+            </button>
+        </div>
+        <div class="col-md-3 col-sm-3 crystal">
+            <button class='crystalButton' id='button3'>
+                <img src="assets/images/Turquoise.jpg" alt="Turquoise">
+            </button>
+        </div>
+        <div class="col-md-3 col-sm-3 crystal">
+            <button class='crystalButton' id='button4'>
+                <img src="assets/images/Rainbow.jpg" alt="Rainbow">
+            </button>
+        </div>
+</div>
+       <!--Hidden Modal-->
+       <div class="modal alert row text-center">
+        <h3 id="winloss"></h3>
+        <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Play Again</a>
+    </div>
+    <br>
+
+    <!--Third Row-->
+    <div class="row box">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Target Score: </h4>
+                    <div id="scoreTarget"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Your Score: </h4>
+                    <div id="scoreBox">0</div>
+                </div>
+            </div>
+        </div>
+       
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Wins: </h4>
+                    <div id="wins"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Losses: </h4> 
+                    <div id="losses">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/javascript/game.js"></script>
+</body>
+</html>
