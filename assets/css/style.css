@@ -32,6 +32,7 @@ p {
 .row {
     margin-bottom: 3rem;
     text-align: center;
+    color: azure; 
 }
 
 button {
